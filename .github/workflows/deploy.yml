@@ -20,8 +20,11 @@ jobs:
     - name: Install SASS Compiler
       run: npm install -g sass 
 
-    - name: Compile SCSS files
+    - name: Compile SCSS Files
       run: sass scss/style.scss style.css
+
+    - name: Delete Redundant Files
+      run: rm -rf scss .git .github *.md .gitignore
     
     - name: Upload to Server
       uses: sebastianpopp/ftp-action@releases/v2

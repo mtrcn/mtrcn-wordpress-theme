@@ -1,35 +1,33 @@
 <?php
 	get_header();
 ?>
-	<div id="primary">
-		<div id="content" role="main" class="span8 offset2">
+	<div id="content" role="main">
 
-			<?php if ( have_posts() ) : ?>
+		<?php if ( have_posts() ) : ?>
 
-				<?php while ( have_posts() ) : the_post(); ?>
+			<?php while ( have_posts() ) : the_post(); ?>
 
-					<article class="post">
-					
-						<h1><?php the_title(); ?></h1>
-						
-						<div class="the-content">
-							<?php the_content(); ?>
-							
-							<?php wp_link_pages(); ?>
-						</div><!-- the-content -->
-						
-					</article>
-
-				<?php endwhile; ?>
-
-			<?php else : ?>
+				<article class="post">
 				
-				<article class="post error">
-					<h1 class="404">Nothing posted yet</h1>
+					<h1><?php the_title(); ?></h1>
+					
+					<div class="the-content">
+						<?php the_content(); ?>
+						
+						<?php wp_link_pages(); ?>
+					</div><!-- the-content -->
+					
 				</article>
 
-			<?php endif; ?>
+			<?php endwhile; ?>
 
-		</div><!-- #content .site-content -->
-	</div><!-- #primary .content-area -->
+		<?php else : ?>
+			
+			<article class="post error">
+				<h1 class="404">Nothing posted yet</h1>
+			</article>
+
+		<?php endif; ?>
+
+	</div><!-- #content .site-content -->
 <?php get_footer(); ?>

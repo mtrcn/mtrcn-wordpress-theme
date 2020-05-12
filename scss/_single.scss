@@ -10,23 +10,24 @@
 
   &-meta{
     font-size: 0.9rem;
+    .tags {
+      opacity: .5;
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .the-content {
+    margin: 30px 0px 0px;
   }
 
   &-title {
     font-size: 1.625rem;
-    margin: 0 0 5px;
+    margin: 30px 0px 5px;
 
     a {
       text-decoration: none;
     }
   }
-}
-
-.meta .tags {
-  margin-top: 5px;
-  font-size: 1rem;
-  opacity: .5;
-  a {
-    text-decoration: none;
-  }
-}
+} 

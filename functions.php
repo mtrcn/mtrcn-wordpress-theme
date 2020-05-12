@@ -21,13 +21,16 @@ add_theme_support( 'post-thumbnails' );
 /*-----------------------------------------------------------------------------------*/
 register_nav_menus( 
 	array(
-		'primary'	=>	__( 'Primary Menu', 'naked' ), // Register the Primary menu
-		// Copy and paste the line above right here if you want to make another menu, 
-		// just change the 'primary' to another name
+		'primary'	=>	__( 'Primary Menu',  'mtrcn'),
+		'social'	=>	__( 'Social Links',  'mtrcn'),
 	)
 );
 
 function mtrcn_scripts()  { 
 	wp_enqueue_style('style.css', get_stylesheet_directory_uri() . '/style.css');	 
 }
-add_action( 'wp_enqueue_scripts', 'mtrcn_scripts' ); // Register this fxn and allow Wordpress to call it automatcally in the header
+
+add_action( 'wp_enqueue_scripts', 'mtrcn_scripts' );
+
+
+require get_template_directory() . '/inc/social-icon-functions.php';

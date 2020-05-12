@@ -1,3 +1,10 @@
-.the-content {
-  border-bottom: 1px grey dashed;
+.post-list {
+  .the-content {
+    border-bottom: 1px grey dashed;
+    margin: 20px 0px 0px;
+  }
+  .post-title {
+    margin: 20px 0px 5px;
+  }
 }
+

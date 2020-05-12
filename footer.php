@@ -2,6 +2,22 @@
 
 <footer class="site-footer">
 	<div class="site-info container">
+
+	<?php if ( has_nav_menu( 'social' ) ) : ?>
+		<nav class="social-navigation">
+			<?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'social',
+					'menu_class'     => 'social-links-menu',
+					'link_before'    => '<span class="screen-reader-text">',
+					'link_after'     => '</span>',
+					'depth'          => 1,
+				)
+			);
+			?>
+		</nav><!-- .social-navigation -->
+	<?php endif; ?>
 		
 		<p>&copy; <?php echo date("Y"); ?></p>
 		
