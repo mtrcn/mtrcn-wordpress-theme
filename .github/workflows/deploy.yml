@@ -1,0 +1,24 @@
+name: Deploy Theme
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Setup Node.js environment
+      uses: actions/setup-node@v1.4.2
+      with:
+        node-version: 12.x
+
+    - name: Install SASS Compiler
+      run: npm install -g sass 
+
+    - name: Compile SCSS files
+      run: sass scss/style.scss style.css
