@@ -22,3 +22,11 @@ jobs:
 
     - name: Compile SCSS files
       run: sass scss/style.scss style.css
+    
+    - name: Upload to Server
+      uses: sebastianpopp/ftp-action@releases/v2
+      with:
+        host: ${{ secrets.FTP_SERVER }}
+        user: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        remoteDir: "public_html/wp-content/themes/mtrcn/"
