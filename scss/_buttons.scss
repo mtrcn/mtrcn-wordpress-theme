@@ -1,0 +1,25 @@
+input[type=submit],
+button,
+.button,
+a.button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 18px;
+  margin-bottom: 5px;
+  background: $light-background-secondary;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 500;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  appearance: none;
+  cursor: pointer;
+  outline: none;
+
+  .dark-theme & {
+    background: $dark-background-secondary;
+    color: inherit;
+  }
+}

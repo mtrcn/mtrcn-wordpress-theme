@@ -1,0 +1,32 @@
+.post {
+  width: 100%;
+  max-width: 800px;
+  padding: 0px 20px;
+  margin: 20px auto;
+
+  @media #{$media-size-tablet} {
+    max-width: 600px;
+  }
+
+  &-meta{
+    font-size: 0.9rem;
+  }
+
+  &-title {
+    font-size: 1.625rem;
+    margin: 0 0 5px;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+.meta .tags {
+  margin-top: 5px;
+  font-size: 1rem;
+  opacity: .5;
+  a {
+    text-decoration: none;
+  }
+}
