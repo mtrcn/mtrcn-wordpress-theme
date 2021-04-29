@@ -14,6 +14,7 @@ I have tried to use Hexo, Hugo and other static blog engines, but none of them g
 ## Technology Stack
 - PHP
 - [SCSS](https://sass-lang.com/)
+- [Prism](https://prismjs.com/) - Used for code highlighting
 - [Github Actions](https://github.com/features/actions)
 
 ## How to Contribute

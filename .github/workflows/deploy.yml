@@ -26,10 +26,18 @@ jobs:
     - name: Delete Redundant Files
       run: rm -rf scss .git .github *.md .gitignore
     
-    - name: Upload to Server
+    - name: Upload to English Site
       uses: sebastianpopp/ftp-action@releases/v2
       with:
         host: ${{ secrets.FTP_SERVER }}
         user: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         remoteDir: "public_html/wp-content/themes/mtrcn/"
+
+    - name: Upload to Turkish Site
+      uses: sebastianpopp/ftp-action@releases/v2
+      with:
+        host: ${{ secrets.FTP_SERVER }}
+        user: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        remoteDir: "public_html/tr/wp-content/themes/mtrcn/"
